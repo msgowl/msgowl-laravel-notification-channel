@@ -25,7 +25,7 @@ class MsgOwlChannelTest extends TestCase
 
     private $channel;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->notification = new TestNotification;
         $this->string_notification = new TestStringNotification;
@@ -35,7 +35,7 @@ class MsgOwlChannelTest extends TestCase
         $this->channel = new MsgOwlChannel($this->client);
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         Mockery::close();
         parent::tearDown();
